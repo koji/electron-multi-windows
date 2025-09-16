@@ -89,7 +89,13 @@ npm run package:all     # All platforms
 
 ### Package Output
 
-- `release/` - Packaged applications for distribution
+**Simple Package:**
+
+- `release/simple-package/` - Portable package (recommended)
+
+**Advanced Packages:**
+
+- `release/` - Platform-specific installers and packages
 
 ## Build Configuration
 
@@ -146,9 +152,11 @@ The build is configured in `package.json` under the `build` section:
    ```
 
 4. **Packaging Fails**
-   - Ensure all dependencies are installed
+   - Try simple packaging first: `npm run package:simple`
+   - For advanced packaging: ensure all dependencies are installed
    - Check platform-specific requirements
    - Verify build completed successfully
+   - On Windows: Code signing issues can be resolved by using simple packaging
 
 ### Build Verification
 
