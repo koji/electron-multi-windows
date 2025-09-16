@@ -56,26 +56,28 @@ npm run verify-build
 
 ## Packaging
 
-### Package for Current Platform
+### Simple Package (Recommended)
 
 ```bash
-npm run package
+# Create a simple package without code signing
+npm run package:simple
 ```
 
-### Package for Specific Platforms
+This creates a portable package in `release/simple-package/` that can be distributed and run on any system with Node.js.
+
+### Advanced Packaging (electron-builder)
+
+**Note**: Advanced packaging may require additional setup for code signing and platform-specific tools.
 
 ```bash
-# Windows
-npm run package:win
+# Package for current platform
+npm run package
 
-# macOS
-npm run package:mac
-
-# Linux
-npm run package:linux
-
-# All platforms (requires platform-specific tools)
-npm run package:all
+# Package for specific platforms
+npm run package:win     # Windows
+npm run package:mac     # macOS
+npm run package:linux   # Linux
+npm run package:all     # All platforms
 ```
 
 ## Build Output
